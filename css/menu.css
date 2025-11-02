@@ -1,0 +1,92 @@
+/* Sidebar Menu Styles */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 2px;
+    background-color: #FFA500;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+#sidebar nav {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#sidebar nav ul {
+    list-style-type: none;
+    padding: 20px 0 0 0;
+    margin: 0;
+}
+
+#sidebar nav ul li {
+    border-bottom: 1px solid #333333;
+}
+
+#sidebar nav ul li a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#sidebar nav ul li a:hover {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+#sidebar:hover, #sidebar.active {
+    width: 250px;
+}
+
+#sidebar:hover nav, #sidebar.active nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+#sidebar #menu-list {
+    background-color: #000000;
+}
+
+/* Hamburger Icon */
+#hamburger-icon {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20px;
+    height: 20px;
+}
+
+#hamburger-icon span {
+    width: 20px;
+    height: 2px;
+    background-color: #FFA500;
+    transition: background-color 0.3s ease;
+}
+
+#hamburger-icon:hover span {
+    background-color: #FFA500;
+}
+
+/* Responsive adjustments for menu */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        transform: translateX(-200px);
+    }
+
+    .sidebar nav ul li a {
+        padding: 12px 15px;
+    }
+}
