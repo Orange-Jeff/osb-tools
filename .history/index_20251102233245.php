@@ -22,9 +22,13 @@
         <span></span>
         <span></span>
     </div>
-    <div class="overlay" id="overlay"></div>
     <main id="content">
-        <!-- Tool content will be loaded here dynamically -->
+        <header>
+            <h1>OSB Tools Suite</h1>
+        </header>
+        <section>
+            <p>Welcome to the OSB Tools Suite. Select a tool from the sidebar to get started.</p>
+        </section>
     </main>
     <script src="js/menu.js"></script>
     <script src="js/core.js"></script>

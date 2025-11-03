@@ -30,11 +30,11 @@ function scanTools() {
             ];
         }
 
-        // Check for directories that contain a 'script.php' file
-        elseif (is_dir($fullPath) && file_exists($fullPath . '/script.php')) {
+        // Check for directories with 'anphp' in their name
+        elseif (is_dir($fullPath) && strpos($file, 'anphp') !== false) {
             $menuItems[] = [
-                'name' => ucfirst(str_replace(['-', '_'], ' ', $file)), // Make name more readable
-                'url' => 'tools/' . $file . '/script.php'
+                'name' => ucfirst($file),
+                'url' => 'tools/' . $file . '/script.php' // Using script.php as specified
             ];
         }
     }

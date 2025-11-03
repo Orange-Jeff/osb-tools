@@ -57,6 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loadToolFromUrl(toolName);
   } else {
     // Default to loading the ACE editor if no tool is specified
-    loadToolFromUrl("tools/obs-ace-editor/script.php");
+    loadToolFromUrl("tools/osb-ace-editor.php");
   }
 });

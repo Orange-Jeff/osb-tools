@@ -1,0 +1,92 @@
+/* Global Theme Styles */
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Basic Layout */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #000000;
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+#sidebar.active {
+    transform: translateX(0);
+}
+
+#content {
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+#sidebar.active + #content {
+    margin-left: 250px;
+}
+
+/* Menu Toggle Button */
+#menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #FFA500;
+    color: #000000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+}
+
+#menu-toggle:hover {
+    background-color: #FF8C00;
+}
+
+/* Header Styling */
+header {
+    background-color: #111111;
+    padding: 20px;
+    border-bottom: 2px solid #FFA500;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #FFA500;
+    margin: 0;
+}
+
+/* Section Styling */
+section {
+    background-color: #111111;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+        transform: translateX(-200px);
+    }
+
+    #sidebar.active + #content {
+        margin-left: 200px;
+    }
+
+    #content {
+        padding: 15px;
+    }
+}
